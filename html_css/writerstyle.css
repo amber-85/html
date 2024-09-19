@@ -1,0 +1,90 @@
+h3{
+    font-weight:900;
+}
+
+.article_container{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top: 8%;
+    margin-left: 1%;
+    margin-right: 1%;
+} 
+
+.hamingway{
+    background-color: rgb(107, 197, 217);
+    width:30%;
+    height:300px;
+    text-align: center;
+    padding: 10px;
+}
+
+.hamingway a{
+    text-decoration: none;
+    color:black;
+    background-color: aliceblue;
+    padding: 5px;
+    border:3px dotted rgb(202, 93, 42);
+}
+
+
+.hamingway a:hover{   
+    color: aliceblue;
+    font-weight: 900;
+    background-color:rgb(202, 93, 42);
+    padding: 5px;
+    border:3px dotted aliceblue;
+}
+.stendhal{
+    background-color: rgb(247, 180, 98);
+    width:30%;
+    height: 300px;
+    text-align: center;
+    padding:10px;
+    
+}
+
+.stendhal a{
+    text-decoration: none;
+    color:black;
+    background-color: aliceblue;
+    padding: 5px;
+    display:flexbox;
+    border:3px dotted rgb(202, 93, 42);
+}
+
+.stendhal a:hover{   
+    color: aliceblue;
+    background-color:rgb(202, 93, 42);
+    padding: 5px;
+    border:3px dotted aliceblue;
+    font-weight: 900;
+}
+
+.dickens{
+    background-color: rgb(22, 164, 164);
+    width:30%;
+    height: 300px;
+    text-align: center;
+    padding: 10px;
+}
+
+.dickens a{
+    text-decoration: none;
+    color:black;
+    background-color: aliceblue;
+    padding: 5px;
+    border:3px dotted rgb(202, 93, 42);
+}
+
+.dickens a:hover{   
+    color: aliceblue;
+    background-color:rgb(202, 93, 42);
+    padding: 5px;
+    border:3px dotted aliceblue;
+    font-weight: 900;
+}
+
+footer{
+    margin-top: 8%;
+}

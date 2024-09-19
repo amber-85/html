@@ -1,0 +1,138 @@
+.introduction-container{
+    width: 90%;
+    display:flex;
+    justify-content:center;
+    padding-left: 2%;
+    padding-top: 5%;
+  
+}
+
+.name{
+    width:10%;
+    height: auto;
+    
+}
+
+.name h1{
+    color:rgb(234, 89, 37);
+    text-align: center;
+    padding-top: 20%;
+   
+}
+
+.description{
+    width: 60%;
+    height: auto;
+    margin-left: 20%;
+}
+
+
+article{
+    width: 63%;
+    margin-left: 3%;
+    float:left;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.education{
+    display: flexbox;
+}
+
+section{
+    margin-left: 5%;
+    height: max-content;
+   
+}
+
+.education{
+    background-color: rgb(242, 235, 230);
+}
+ h2{
+    color: rgb(228, 114, 43);
+    width: 85%;
+    margin-left:5%;
+    padding-top: 3%;
+    border-bottom: 3px solid rgb(209, 97, 27);
+    font-size:x-large;
+    font-weight: bold;
+    margin-bottom: 1%;
+   
+}
+
+h3{
+    font-size: large;
+    font-weight: bold;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+.work{
+   background-color: rgb(242, 235, 230);;
+}
+/*.work h2{
+    color:rgb(228, 114, 43);
+    width: 85%;
+    margin-left:5%;
+    border-bottom: 3px solid rgb(209, 97, 27);
+    font-size:x-large;
+    font-weight: bold;
+    margin-bottom: 1%;
+}*/
+
+.work{
+    padding-bottom: 5%;
+    margin-top: 3%;
+    padding-top: 1%;
+}
+
+aside{
+    margin-top: 3%;
+    width:30%;
+    float:inline-start;
+    margin-left: 1%;  
+}
+
+aside ul {
+    padding-left: 5%;
+    width: 90%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+
+.skills{
+    height: auto;
+    background-color: bisque;
+    padding: 10px;
+}
+
+.contact{
+    margin-top: 10%;
+    padding-top: 2%;
+    background-color: rgb(246, 221, 221);
+}
+
+.contact ul{
+    padding-left: 8%;
+    padding-top: 3%;
+}
+.social-media{
+    display: flexbox;
+    margin-left: 5%;
+    padding-bottom: 3%;
+    padding-top: 5%;
+    
+
+}
+
+.social-media img{
+    width:10%;
+    padding-left: 10px;
+}
+aside h2{
+    text-align: center;
+}
+footer{    
+    clear:left
+}

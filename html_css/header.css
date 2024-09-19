@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+    font-size: x-large;
+    font-weight: 900;
+    margin-top: 3%; 
+    margin-bottom: 2%;   
+}
+
+nav{
+    width:auto;
+    background-color: rgb(215, 115, 115);
+}
+
+nav ul {
+    list-style: none;
+    height:fit-content;
+    display:flex;
+    justify-content:end;
+    align-items: center;
+}
+
+nav ul li a{
+    display: block;
+    height: max-content;  
+    padding: 1rem 1rem;
+    color: aliceblue;
+}
+nav ul li a:link{
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    font-weight: 900;
+    color: bisque;
+    background-color:rgb(198, 88, 88);
+    text-align: center;
+}

@@ -1,0 +1,75 @@
+
+
+h2{
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bolder;
+
+}
+
+.content_container{
+    background-color: rgb(153, 187, 216);
+    border: 5px dotted rgb(22, 201, 88);  
+    display: flex;
+    margin: 5% 2%;
+}
+
+.content_container div{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    text-align: center;
+    padding: 30px;
+    flex: auto;
+}
+
+.content_container div p{
+    text-align: center;
+    padding: 5% 0;
+   
+}
+
+.content_container a{
+    padding:10px 20px;
+    text-decoration: none;
+    color: rgb(9, 9, 9);
+    background-color: rgb(251, 255, 249);
+    border-style: dotted;
+    align-self: center;
+      
+}
+
+.content_container a:hover{
+    font-weight: 1000;
+    color:rgb(252, 252, 252);
+    background-color:  rgb(12, 50, 139);
+}
+.writer{   
+    background-color: blanchedalmond; 
+    flex: 2;
+    width: 30%;
+}
+
+.aboutme{
+   /* width:20%;
+    height:auto;
+    text-align: center;*/
+    background-color: rgb(192, 148, 233);
+    width: 20%;
+}
+
+.googlepage{
+    /*width:20%;
+    height:auto;
+    text-align: center;*/
+    background-color: rgb(251, 167, 137);
+    width: 20%;
+}
+
+.helps{
+    background-color: cornflowerblue;
+    width: 20%;
+   /* width:20%;  
+    text-align: center;*/
+}
+

@@ -1,0 +1,11 @@
+footer{
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+    padding:1rem 1rem;
+}
+
+.column{
+    margin-left: 20%;
+}
