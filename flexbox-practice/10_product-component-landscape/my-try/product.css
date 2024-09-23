@@ -7,10 +7,11 @@ body{
 }
 
 article{
-    border: 2px dotted red;
     width: 70%;
     height: 60vh;
     display: flex;  
+    box-shadow: 4px 4px 8px gray;
+    margin-top: 10%;
 }
 
 article figure{
@@ -36,7 +37,6 @@ article figure figcaption{
 }
 
 article section{
-    border: 2px solid green;
     flex: 1;
     display: flex;
     flex-direction: column;

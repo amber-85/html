@@ -5,8 +5,9 @@ body{
 }
 
 #wrapper{
-    width:30%;
-    height: 40rem;
+    width:30vw;
+    height: 80vh;
+    box-sizing: border-box;
     background-color: rgb(249, 249, 249);
     display: flex;
     flex-direction: column;
@@ -26,7 +27,7 @@ body{
 }
 
 article{
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,12 +35,15 @@ article{
 
 article img{
     border-radius: 100px;
+    width: 50%;
 }
 
 h3{
     font-size: 30px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bolder;
+    width: 80%;
+    text-align: center;
 }
 
 p{
@@ -48,6 +52,7 @@ p{
     color: rgb(144, 142, 142);
     text-align: center;
     font-size: 20px;
+    width: 50%;
 
 }
 
