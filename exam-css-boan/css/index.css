@@ -1,0 +1,624 @@
+
+/* i applied grid to create the layout for header img part. since the 
+img of hand is much longer than one on prototype, I gave the grid for 
+first row a specific number with 25rem and use object-fit cover to make 
+the img fit into the container*/
+.header__frame{
+    display: grid;
+    grid-template: 25rem 1fr/repeat(2,1fr);
+    position:relative;
+    .header__img--hand{
+        grid-column: auto/span 2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .header__img--heart{
+        position:absolute;
+        top:22%;
+        left:26%;
+        width: 11rem;
+        }
+    .header__img--plant{
+        grid-column: auto/span 1;
+        width: 100%;
+        height: 100%;    
+        background-color:#9E6D52;
+        padding:3rem;       
+    }
+    
+    .header__img--spade{
+        grid-column: auto/span 1;
+        width: 100%;
+        height: 100%;
+        background-color:#0A846E;
+        padding:3rem;
+    } 
+    
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        position:absolute;
+        top:1rem;
+        right:1rem;
+        i{
+            align-self: flex-end;
+            font-size: 2rem;
+        }
+        .nav__list{
+            display:none;
+            background-color: #0A846E;
+            .nav__items{
+                list-style: none;
+                color: rgb(245, 252, 250);
+                text-align:right;
+            }
+           
+        } 
+    }
+}
+
+.product__promotion__frame{
+    margin-top: 1rem;
+    text-align: center;
+    .product__promotion--tittle{
+        color: #0A846E;
+        font-size: 24px;
+       
+    }
+    .product__promotion--description{
+        h3{
+            font-weight: 600;   
+            margin-top: 2rem;
+        }
+        p{
+            margin-top: 1rem;
+            font-size: 14px;
+        }        
+        .product__promotion--button{
+            font-size: 16px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1rem;
+            padding:.5rem 1rem;
+            background-color: #0A846E;
+            color: rgb(245, 252, 250);
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px rgb(209, 211, 210);
+        }  
+        .product__promotion--icon{
+            background-color:#0A846E;
+            margin-top: 2rem;
+            padding:3rem;
+            width: 12rem;
+            height: 12rem;
+            border-radius: 100%;    
+        }
+        .product__promotion--borderline{
+            border-bottom: 2px solid #0A846E;
+            width: 60%;
+            margin-left: 20%;
+            margin-top: 2rem;
+        }
+    }
+
+  
+   
+  
+}
+/* I tried with repeat(5,1fr) but it looks very weird since the first and last rows 
+became too wide */
+.product__gallery{
+    display: grid;
+    grid-template: 3rem repeat(3,1fr) 5rem/repeat(2,1fr);
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    gap:1rem;
+    .gallery__tittle{
+        grid-column: auto/span 2;
+        text-align: center;
+        font-size:20px;
+    }
+    .gallery__button{
+        grid-column: auto/span 2;
+        justify-self: center;
+        align-content: flex-end;
+        margin-top: 2rem;
+        font-size: 16px;
+        display: block;
+        background-color: #0A846E;
+        color: rgb(245, 252, 250);
+        padding:.5rem 1rem;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px rgb(209, 211, 210);
+
+    }
+}
+ 
+.product__cards{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 2px 4px rgb(209, 211, 210);;
+    .product__img{
+        width: 100%;
+        height: 10rem;
+        position:relative;      
+        .plant__img{
+            height: 100%;
+            width: 100%;
+            object-fit:cover;
+        } 
+        .plant__vector{
+            position:absolute;
+            top:20%;
+            left:25%;
+            width: 5rem;
+            opacity: 0.8;
+        }
+
+    }
+    .card__description{
+        display: grid;
+        grid-template:repeat(2,1fr)/repeat(2,1fr);
+        align-items: center;
+        padding:2%;
+        margin-top: 3%;
+        margin-left: 2%;
+        margin-right: 2%; 
+        margin-bottom: 2%;
+        .card__name{
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .card__date{
+            font-size: 10px;
+            font-weight: 600;
+            justify-self:flex-end;
+        }
+        .card__type{
+            font-size: 10px;
+            font-weight: 100;
+        }
+
+        i{
+            color: crimson;
+            justify-self:flex-end;
+        }
+        .delete__button--word{
+            display: none;
+        }
+    }
+       
+   
+}
+
+/* applied grid in the img container so that it became easier to set vector
+in the center */
+.product__warehouse{
+    margin-top: 3rem;    
+    width: 100%;
+    text-align: center;
+    .warehouse__img__container{  
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #0A846E;
+        width: 60%;
+        border-radius: 50%; 
+        display: grid;
+        .plant__vector--warehouse{   
+            margin-left: auto;
+            margin-right: auto; 
+            height: 60%;
+            place-self: center;  
+        }
+    }
+
+    .warehouse__description{
+        .warehous--tittle{
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 2rem; 
+        }
+        .warehouse--content{
+            font-size: 14px;
+            margin:1rem
+        }
+
+        .warehouse__button{
+            background-color: #0A846E;
+            color: rgb(245, 252, 250);
+            font-size: 14px;
+            padding:.7rem 1rem;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px rgb(209, 211, 210);
+            margin-top: 1rem;
+        }
+    }
+}
+
+.footer__logo__container{
+    margin-top: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template: repeat(2, 25rem)/1fr;
+    background-image: url(../img/homepage/hand-footer.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .footer__logo{
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: 25%;
+    }
+}
+
+.contact__frame{
+    display: grid;
+    grid-template: 1fr 1fr/1fr;
+    background-color: rgb(13, 14, 14, 0.8);
+    .contact__tittle{
+        place-self: center;
+        align-self: flex-end;
+        font-size: 28px;
+        font-weight: 600;
+        color: rgb(245, 252, 250);
+    }
+    .contact__info{
+        align-self: flex-end;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-bottom: 3%;
+        .contact--phone{ 
+            display: flex;
+            flex-wrap: wrap;
+            gap:.2rem;
+            .phone__number{
+                font-size: 14px;
+                font-weight: 100;
+                color: rgb(245, 252, 250); 
+                }  
+            .phone__vector{
+                width: 1rem;
+                height: 1rem;
+            }
+           
+        }
+        .contact--email{
+            display: flex;
+            flex-wrap: wrap;
+            gap:.2rem;
+            .email__address{
+                font-size: 14px;
+                font-weight: 100;
+                color: rgb(245, 252, 250); 
+            }  
+            .email__vector{
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    }
+}
+
+.footer__final{
+    text-align: center;
+    padding:1.5rem;
+}
+
+@media screen and (min-width:541px){
+    .header__frame{
+        grid-template: repeat(2,17rem)/repeat(2,1fr);       
+        .header__img--hand{
+            grid-row: auto/span 2;
+            grid-column: auto/span 1;
+        }
+        .header__img--heart{
+            position:absolute;
+            top:35%;
+            left:14%;
+            width: 14rem;
+            height: 14rem;
+            }
+        
+        .header__img--plant{  
+            grid-template-columns: auto/span 1; 
+            width: 100%;
+            height: 100%;         
+            margin-left: auto;
+            margin-right: auto;
+            padding:2rem;    
+            background-color:#9E6D52
+            }            
+        .header__img--spade{
+            grid-template-columns: auto/span 1;
+            width: 100%;
+            height: 100%;
+            background-color:#0A846E;
+            padding:2rem;
+            margin-left: auto;
+            margin-right: auto;
+            }
+        
+        .navbar{
+          width: 100%;
+          position:absolute;
+          top:34rem;
+          right:0;
+            i{
+                display: none;
+            }
+            .nav__list{
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                background-color: rgb(245, 252, 250);
+                list-style: none;
+                .nav__items{
+                    padding: 1rem;
+                    color: #0A846E;                   
+                }          
+            }
+        }
+    }
+    .product__promotion__frame{
+        margin-top: 7rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        text-align: left;
+        display: grid;
+        grid-template: 6rem 1fr 6rem/repeat(2,1fr);
+        .product__promotion--tittle{
+            font-size: 50px;
+            grid-column: auto/span 2;
+            text-align: center; 
+        }
+        .product__promotion--description{
+            grid-column: 2/span 1;
+
+            .description--tittle{
+                font-weight: 600;   
+                margin-top: 3rem;
+                font-size: 30px;
+                align-self: center;
+            }
+        
+            .description--content{
+                margin-top: 1rem;
+                font-size: 20px;
+            }
+            .product__promotion--button{
+                font-size: 20px;
+                display: inline-block;
+                padding:1rem 2rem;
+                align-self: flex-start;
+                margin-right: 4rem;
+            }
+        }
+      
+        .product__promotion--icon{
+            grid-column: 1/span 1;
+            grid-row: 2/span 1;
+            background-color:#0A846E;
+            margin-top: 0;
+            margin-left: 0;
+            place-self: center;
+            padding:3rem;
+            width: 70%;
+            height: 80%;
+            border-radius: 100%;
+        
+        }
+        .product__promotion--borderline{
+            border-bottom: 4px solid #0A846E;
+            margin-left: 20%;
+            margin-top: 2rem;
+            grid-column: auto/span 2;
+            align-self: flex-start;
+        }
+    }
+    
+    .product__gallery{
+        display: grid;
+        grid-template: 3rem repeat(2,1fr) 6rem/repeat(3,1fr);
+        .gallery__tittle{
+            grid-column: auto/span 3;
+            text-align: center;
+            font-size:40px;
+            font-weight: 500;
+        }
+        .gallery__button{
+            grid-column: auto/span 3;
+            justify-self: center;
+            align-self: center;
+            margin-top: 2rem;
+            font-size: 30px;
+            text-transform: lowercase;
+            display: inline-block;
+            background-color: #0A846E;
+            color: rgb(245, 252, 250);
+            padding:1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px rgb(209, 211, 210);
+    
+        }
+    }
+    
+    .product__cards{
+        display: flex;
+        flex-direction: column;
+        box-shadow: 3px 2px 4px rgb(209, 211, 210);
+        .product__img{
+            width: 100%;
+            height: 20rem;
+            position:relative;      
+            .plant__img{
+                height: 100%;
+                width: 100%;
+                object-fit:cover;
+            }           
+            .plant__vector{
+                width: 12rem;
+                height: 12rem;
+                opacity: 0.8;
+            }
+        }       
+        .card__description{
+            .card__name{
+                font-size: 20px;
+                font-weight: 600;
+            }
+            .card__date{
+                font-size: 16px;
+                font-weight: 600;
+            }  
+            .card__type{
+                font-size: 16px;
+                font-weight: 100;
+            }
+            i{
+                display: none;
+            }
+            .delete__button--word{
+                display: inline-block;
+                background-color: crimson;
+                color: rgb(245, 252, 250);
+                width: max-content;
+                padding:.5rem 1rem;
+                border-radius: 8px;
+                justify-self: flex-end;
+            }
+        }
+                  
+    }
+     
+
+    /* here i tried to use percentage instead of specified numbers for image size
+    it allows the image to shrink when the screen size changes, however, the shpae will be modified.
+    it might not be a better solution than a specified size */
+    .product__warehouse{
+        /* display: grid;
+        grid-template: 1fr/repeat(2,1fr); */
+        /* I tried with grid and order 1 here, it worked but i think it would be great to try with flex and rwo reverse. 
+        it seemed with flex and margin the layout looks better than grid and order. */
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5rem;
+        margin-top: 3rem;
+        gap:1rem;
+
+        .warehouse__description{
+            width: 500px;
+            text-align: left;
+            .warehouse--tittle{
+                font-size: 30px;
+                font-weight: 600;
+            }
+            .warehouse--content{
+                font-size: 20px;
+            }
+            .warehouse__button{
+                background-color: #0A846E;
+                color: rgb(245, 252, 250);
+                display: inline-block;
+                padding:1rem 2rem;
+                font-size: 20px;
+                border-radius: 10px;
+                box-shadow: 2px 2px 4px rgb(209, 211, 210);
+                margin-top: 1rem;
+              
+
+            }
+        }
+        .warehouse__img__container{  
+            width: 30%;
+            .plant__vector--warehouse{   
+                height: 70%;
+                padding: 1rem;
+            }
+        }
+    }
+
+
+    .footer__logo__container{
+        margin-top: 2rem;
+        width: 100%;
+        display: grid;
+        grid-template: 35rem/repeat(2, 1fr);
+        background-image: url(../img/homepage/hand-footer.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .footer__logo{
+            margin-left: auto;
+            margin-right:auto;
+            order:1; 
+            /* here i simply used order 1 to switch the 
+            place of two containers in contact section. 
+            it works better than flex row reverse. */
+        }
+    }   
+
+    .contact__frame{
+        display: grid;
+        grid-template: 1fr 1fr/1fr;
+        background-color: rgb(13, 14, 14, 0.8);
+        
+        .contact__frame{
+            place-self: center;
+            align-self: flex-end;
+            font-size: 50px;
+            font-weight: 600;
+            color: rgb(245, 252, 250);
+        }
+        .contact__info{
+            align-self: flex-end;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 1%;
+            margin-right: 1%;
+            margin-bottom: 3%;
+            .contact--phone{ 
+                display: flex;
+                flex-wrap: wrap;
+                gap:.2rem;
+                .phone__number{
+                    font-size: 24px;
+                    font-weight: 100;
+                    color: rgb(245, 252, 250); 
+                    }  
+                .phone__vector{
+                    width: 2rem;
+                    height: 2rem;
+                }
+            
+            }
+            .contact--email{
+                display: flex;
+                flex-wrap: wrap;
+                gap:.2rem;
+                .email__address{
+                    font-size: 24px;
+                    font-weight: 100;
+                    color: rgb(245, 252, 250); 
+                }  
+            .email__vector{
+                width: 2rem;
+                height: 2rem;
+            }
+            }
+        }
+    }
+    .footer__final{
+        text-align: center;
+        padding:3rem;
+        font-size: 30px;
+    }
+}

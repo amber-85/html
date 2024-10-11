@@ -1,5 +1,7 @@
 
-.head_pic{
+/* tried with background img for the container to create overlaping of two imges,
+use grid to create layout on header part.  */
+.header__img__frame{
     background-image: url(../img/homepage/hand-footer.jpeg);
     background-position: center;
     background-repeat: no-repeat;
@@ -10,55 +12,30 @@
     grid-template: 1fr 2fr 1fr/1fr;
     place-items: center;
     justify-content: center;
-}
-
-.menubar{
-    color: aliceblue;
-    margin-right:1rem;
-    margin-top: 1rem;
-    justify-self: flex-end;
-    flex-direction: column;
-    justify-content: flex-end;
-    display: flex;
-    position:relative;
-    /* input[checkbox]{
-        align-self: flex-end;
-        position: absolute;
-        z-index: 1;
-        opacity: 0; 
-        border: 2px dotted red;} */
-    i{
+    .header__tittle{
+        color: aliceblue;
         font-size: 30px;
-        align-self: flex-end;
-        /* margin-top: 1rem;
-        margin-left:5rem; */
+        font-weight: 500;  
     }
-
-    .menu_list{
-        list-style: none;
-        width: 6rem;
-        text-align: end;
-        /* justify-self: flex-end; */
-        background-color: rgb(2, 94, 25);
-        /* transform: translate(-100%, 0); */
-        li{
-            padding:1%;
-        }
-    }
-/* 
-    input:checked ~ .menu {
-        transform: none;
-      } */
-
 }
 
-.head_pic h1{
-    color: aliceblue;
-    font-size: 30px;
-    font-weight: 500;  
+/* I failed to create the drop down menu, so i simply pu an icon there */
+.menu{      
+    i {
+        margin-top: 1rem;
+        margin-left: 18rem;
+        color: #fdfffe;
+        font-size: 2rem;
+    }
+    /* display none to hide the menu list for mobile layout */
+    .menu__list {
+        display: none;
+    }
 }
 
-.input_group{
+/* use grid for the input section,which allows me to 
+use justify-self etc to change position of each element within the div more efficiently*/
+.input__group{
     margin:1rem;
     display: grid;
     grid-template: 3rem repeat(3, 1fr)/1fr;
@@ -68,10 +45,11 @@
         font-weight: 400;
         justify-self: center;
     }
-    .input_label{
+
+    .input__label{
         font-weight: 400;
     }
-    .input_content{
+    .input__content{
         width: 100%;
         padding:.5rem;
         border-radius: 4px;
@@ -79,61 +57,65 @@
         background-color: rgb(252, 252, 252);        
     }
 
-    button{
+    .input__button{
         background-color:#0A846E;
         color:aliceblue;
         font-weight: 600;
         border-radius: 5px;
         box-shadow: 1px 2px 4px  rgb(175, 173, 173);
-        padding:3% 5%;
+        padding:3% 4%;
         justify-self: center;
         align-self: flex-end;        
     }
 }
 
-
-.card {
+.card__section {
     margin:1rem;
     margin-top: 2rem;
 }
 
-.card_title{
+.card__title{
     font-size: 22px;
     text-align: center;
 }
 
-.card_group{
+.card__group{
     margin-top: 1rem;
     display: grid;
-    gap: .5rem;
+    gap:.5rem;
     grid-template: 1fr/repeat(2,1fr);
 }
 
-.card_frame{
-    grid-template-columns: auto/span 1;  
+.card__frame{
+    grid-column: auto/span 1;  
     box-shadow: 2px 4px 6px rgb(175, 173, 173);
     border-radius: 1px;
-    .card_img{
+    .card__img{
         height: 10rem;
-        .plant_img{
+        .plant__img{
             width: 100%;
             height: 100%;
+            object-fit: cover;
+        }
+        .plant__vector{
+            display: none;
         }
     }
-    .card_description{
+
+    .card__description{
         padding:.5rem;
         display: grid;
         grid-template: repeat(2,1fr)/repeat(2,1fr);
         align-items: center;
-        h2{font-size: 10px;font-weight: 600;}
-        .date{font-size:8px;font-weight: 600;justify-self: flex-end;}
-        .type{font-size: 8px;font-weight: 100;}
-        .delete_button{
+        .card__name{font-size: 10px;font-weight: 600;}
+        .card__date{font-size:8px;font-weight: 600;justify-self: flex-end;}
+        .card__type{font-size: 8px;font-weight: 100;}
+        .delete__button{
             justify-self: flex-end;
             i{
                 color: rgb(155, 12, 12);
             }
-            .delete_button-1{
+            .delete__button--word{
                 display: none;
             }
         }
@@ -149,133 +131,143 @@
     align-items:stretch; 
     justify-content: center;
     grid-template:repeat(2,6rem) /repeat(2,1fr);    
-    .gallery_img{
+    .gallery__img{
             width: 100%;
             height: 100%;
             object-fit: cover;
     }
 }
-  
 
-@media screen and (min-width:481px){
+footer p{
+    text-align: center;
+    padding:1rem;
+}
 
-    .menubar{
-        justify-self: flex-start;
-        justify-content: flex-start;
-        flex-direction: row;
-        margin-right:0;
-        margin-top: 0;
-        align-self: flex-start;
-        .menu_list{
-            width: 100vw;
-            text-align:start;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            color: #0A846E;
-            background-color: rgb(243, 251, 245);
-            li{
-                padding:1% 2%;
-            }
-        }
-        i{
+/* here i set min-width to 550px because the desktop layout 
+looks extremely ugly on surface duo with wideth of 540px, and I have 
+no idea how can I improve my css in that case*/
+
+@media screen and (min-width:550px){
+    .menu{
+        order:1;
+        width: 100%; 
+        align-self: flex-end;
+        i {
             display: none;
-        }
+          }          
+        .menu__list {
+             width: 100%;
+             height: 4rem; 
+             background: rgb(237, 250, 243) ;
+             list-style-type: none;
+             display: flex;
+             align-items: center;
+             justify-content: space-around;
+             .menu__items{
+                color: #0A846E;
+             }
+          }
     }
 
 
-
-    .logo_heart{
-    width: 18rem;
-    height: 18rem;
+    .head__heart{
+    width: 16rem;
+    height: 16rem;
+    padding-top: 4rem;
+    place-self: center;
     }
 
-    .input_group{
+    .input__group{
         margin:1.5rem;
         display: grid;
         grid-template: 3rem 1fr 1fr/1fr 1fr;
         gap:1rem;   
-        h1{
+        .input__title{
             grid-column: auto/span 2;
             font-size: 28px; 
             font-weight: 500;
             justify-self: flex-start;
             margin-top: 1%;
         }
-        .input_label{
+        .input__label{
             font-weight: 400;
             padding-left: 1%;
-            padding-bottom:3%;
         }
-        .input_content{
+        .input__content{
             width: 100%;
+            margin-top: 2%;
             padding:.5rem;
             border-radius: 4px;
             box-shadow: 1px 4px 6px rgb(175, 173, 173);
             background-color: rgb(252, 252, 252);        
         }
 
-        button{
+        .input__button{
             grid-column: auto/span 2;
             padding:1% 3%;     
         }
     }
 
-    .card {
+    .card__section {
         margin:1.5rem;
         margin-top: 3rem; 
-        .card_title{
+        .card__title{
             font-size: 24px;font-weight: 600;
         }
     } 
 
-    .card_group{
-    margin-top: 1rem;
-    display: grid;
-    gap: 1rem;
-    grid-template: 1fr/repeat(3,1fr);
+    .card__group{
+        margin-top: 1rem;
+        display: grid;
+        gap: 1rem;
+        grid-template: 1fr/repeat(3,1fr);
     
     }
 
-    .card_frame{
-    grid-template-columns: auto/span 1;  
-    box-shadow: 2px 4px 6px rgb(175, 173, 173);
-    border-radius: 1px;
-    .card_img{
-        height: 18rem;
-        .plant_img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    .card_description{
-        padding:1rem;
-        display: grid;
-        grid-template: repeat(2,1fr)/repeat(2,1fr);
-        align-items: center;
-        h2{font-size: 18px;font-weight: 600;}
-        .date{font-size:16px;font-weight: 600;justify-self: flex-end;}
-        .type{font-size: 16px;font-weight: 100;}
-        .delete_button{
-            i{
-                display: none;
-            };
-            justify-self: flex-end;
-            .delete_button-1{
-                font-size: 16px;font-weight: 300;
-                display: block;
-                color: rgb(255, 252, 251);
-                background-color:rgb(155, 12, 12);
-                padding: .5rem 1rem;
-                width: max-content;
-                border-radius: 5px;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+    .card__frame{
+        grid-template-columns: auto/span 1;  
+        box-shadow: 2px 4px 6px rgb(175, 173, 173);
+        border-radius: 1px;
+        position:relative;
+        .card__img{
+            height: 18rem;
+            .plant__img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
-       }
-    }
+            .plant__vector{
+                display: block;
+                position:absolute;
+                top:10%;
+                left:20%;
+            }
+            }
+        .card__description{
+            padding:1rem;
+            display: grid;
+            grid-template: repeat(2,1fr)/repeat(2,1fr);
+            align-items: center;
+            .card__name{font-size: 18px;font-weight: 600;}
+            .card__date{font-size:16px;font-weight: 600;justify-self: flex-end;}
+            .card__type{font-size: 16px;font-weight: 100;}
+            .delete__button{
+                i{
+                    display: none;
+                };
+                justify-self: flex-end;
+                .delete__button--word{
+                    font-size: 16px;font-weight: 300;
+                    display: block;
+                    color: rgb(255, 252, 251);
+                    background-color:rgb(155, 12, 12);
+                    padding: .5rem 1rem;
+                    width: max-content;
+                    border-radius: 5px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                }
+        }
+            }
     }  
 
     .gallery{
@@ -284,6 +276,11 @@
         padding:1.5rem;
         gap:.5rem;
         grid-template:18rem /repeat(4,1fr);    
+    }
+
+    footer p{
+        font-size: 24px;
+        padding:1.5rem;
     }
 
 }

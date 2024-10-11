@@ -12,100 +12,96 @@
 <body>
     <div class="wrapper">
         <header>
-            <div class="head_pic">
-                <div class="menubar">
-                    <input type="checkbox" class="menu_click_button">
+            <section class="header__img__frame">
+                <nav class="menu">
                     <i class="fa fa-bars"></i>
-                    <ul class="menu_list">
-                        <li>PLANERA</li>
-                        <li>HISTORIK</li>
-                        <li>TIPS</li>
-                        <li>LOGGA UT</li>
+                    <ul class="menu__list">
+                        <li class="menu__items">PLANERA</li>
+                        <li class="menu__items">HISTORIK</li>
+                        <li class="menu__items">TIPS</li>
+                        <li class="menu__items">LOGGA UT</li>
                     </ul>
-                </div>
-                <img class="logo_heart" src="./assets/Logo.svg" alt="">
-                <h1>Mina sidor</h1>
-            </div>
-            <div class="input_group">
-                <h1 class="input_title">Lägg till ny plantering</h1>
-                <div class="input-plant">   
-                    <div class="input_label">Planta:</div>
-                    <input type="text" class="input_content"></input>
-                </div>
-                <div class="input-day">   
-                    <div class="input_label">Datum:</div>
-                    <input type="text" class="input_content"></input>
-                </div>
-                <button >Lägg till</button>
-           </div>     
+                </nav>
+                <img class="header__heart" src="./assets/Logo.svg" alt="">
+                <h1 class="header__tittle">Mina sidor</h1>
+            </section>
+            <section class="input__group">
+                <h1 class="input__title">Lägg till ny plantering</h1>
+                <article class="input__frame">   
+                    <label for="plant" class="input__label">Planta:</label>
+                    <input type="text" name="plant" class="input__content"></input>
+                </article>        
+                <article class="input__frame">   
+                    <label for="date" class="input__label">Datum:</label>
+                    <input type="text" name="date" class="input__content"></input>
+                </article>
+                <button class="input__button">Lägg till</button>
+            </section>     
         </header>
         <main>
-            <article class="card product_card_section">
-                <h2 class="card_title">Dina planerade planteringar</h2>
-                <div class="card_group">
-                    <div class="card_frame">        
-                        <figure class="card_img">
-                            <img class="plant_img" src="./img/homepage/cucumber.jpeg" alt="heart_logo">
+            <article class="card__section">
+                <h2 class="card__title">Dina planerade planteringar</h2>
+                <section class="card__group">
+                    <article class="card__frame">        
+                        <figure class="card__img">
+                            <img class="plant__img" src="./img/homepage/cucumber.jpeg" alt="heart_logo">
+                            <img src="./assets/plant.svg" alt="plant_vector" class="plant__vector">
                         </figure> 
-                        <div class="card_description">
-                            <h2>Gurka</h2>
-                            <p class="date">15 april 2024</p>
-                            <p class="type">Rico Coolio</p>
-                            <div class="delete_button">
+                        <section class="card__description">
+                            <h2 class="card__name">Gurka</h2>
+                            <p class="card__date">15 april 2024</p>
+                            <p class="card__type">Rico Coolio</p>
+                            <footer class="delete__button">
                                 <i class="fa fa-trash-o"></i>
-                                <button class="delete_button-1">TA BORT</button>
-                            </div></div>
-                        </div>                   
-                    </div>
-                </div>
-                </article>
-                <article class="card product_card_section">
-                    <h2 class="card_title">Dina planerade planteringar</h2>
-                    <div class="card_group">
-                        <div class="card_frame">        
-                            <figure class="card_img">
-                                <img class="plant_img" src="./img/homepage/cucumber.jpeg" alt="heart_logo">
-                            </figure>
-                            <div class="card_description">
-                                <h2>Gurka</h2>
-                                <p class="date">15 april 2024</p>
-                                <p class="type">Rico Coolio</p>
-                                <div class="delete_button">
-                                    <i class="fa fa-trash-o"></i> 
-                                    <button class="delete_button-1">TA BORT</button>
-                                </div>
-                            </div> 
-                        </div>      
-                        <div class="card_frame">        
-                            <figure class="card_img">
-                                <img class="plant_img" src="./img/homepage/cucumber.jpeg" alt="heart_logo">
-                            </figure>
-                            <div class="card_description">
-                                <h2>Gurka</h2>
-                                <p class="date">15 april 2024</p>
-                                <p class="type">Rico Coolio</p>
-                                <div class="delete_button">
-                                    <i class="fa fa-trash-o"></i>
-                                    <button class="delete_button-1">TA BORT</button>
-                                </div>
-                            </div>   
-                        </div>                
-                        
-                    </div>
+                                <button class="delete__button--word">TA BORT</button>
+                            </footer>
+                        </section>                   
+                    </article>
+                </section>
             </article>
-            <section class="gallery">
-                <!-- <div class="gallery_container"> -->        
-                    <img src="./img/my-page/footer1.jpeg" alt="harvest" class="gallery_img harvest">
-                    <img src="./img/my-page/footer2.jpeg" alt="watering" class="gallery_img watering">
-                   <img src="./img/my-page/footer3.jpeg" alt="vegetable" class="gallery_img vegetable">
-                  <img src="./img/my-page/footer4.jpeg" alt="smile" class="gallery_img smile">
-                </div>
-            </section>
+            <article class="card__section">
+                    <h2 class="card__title">Dina planerade planteringar</h2>
+                    <section class="card__group">
+                        <article class="card__frame">        
+                            <figure class="card__img">
+                                <img class="plant__img" src="./img/homepage/cucumber.jpeg" alt="heart_logo">
+                                <img src="./assets/plant.svg" alt="plant_vector" class="plant__vector">
+                            </figure>
+                            <section class="card__description">
+                                <h2 class="card__name">Gurka</h2>
+                                <p class="card__date">15 april 2024</p>
+                                <p class="card__type">Rico Coolio</p>
+                                <footer class="delete__button">
+                                    <i class="fa fa-trash-o"></i> 
+                                    <button class="delete__button--word">TA BORT</button>
+                                </footer>
+                            </section> 
+                        </article>      
+                        <article class="card__frame">        
+                            <figure class="card__img">
+                                <img class="plant__img" src="./img/homepage/cucumber.jpeg" alt="heart_logo">
+                                <img src="./assets/plant.svg" alt="plant_vector" class="plant__vector">
+                            </figure>
+                            <section class="card__description">
+                                <h2 class="card__name">Gurka</h2>
+                                <p class="card__date">15 april 2024</p>
+                                <p class="card__type">Rico Coolio</p>
+                                <footer class="delete__button">
+                                    <i class="fa fa-trash-o"></i>
+                                    <button class="delete__button--word">TA BORT</button>
+                                </footer>
+                            </section>   
+                        </article>                                       
+                    </section>
+            </article>
+            <aside class="gallery">       
+                    <img src="./img/my-page/footer1.jpeg" alt="harvest" class="gallery__img harvest">
+                    <img src="./img/my-page/footer2.jpeg" alt="watering" class="gallery__img watering">
+                    <img src="./img/my-page/footer3.jpeg" alt="vegetable" class="gallery__img vegetable">
+                    <img src="./img/my-page/footer4.jpeg" alt="smile" class="gallery__img smile">               
+            </aside>
         </main>
-        <footer></footer>
-    </div>
-    
-
-    
+        <footer><p>Till toppen av sidan</p></footer>
+    </div>    
 </body>
 </html>
