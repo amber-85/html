@@ -67,11 +67,11 @@ the img fit into the container*/
        
     }
     .product__promotion--description{
-        h3{
+        .description--tittle{
             font-weight: 600;   
             margin-top: 2rem;
         }
-        p{
+        .description--content{
             margin-top: 1rem;
             font-size: 14px;
         }        
@@ -87,20 +87,20 @@ the img fit into the container*/
             border-radius: 10px;
             box-shadow: 2px 2px 4px rgb(209, 211, 210);
         }  
-        .product__promotion--icon{
-            background-color:#0A846E;
-            margin-top: 2rem;
-            padding:3rem;
-            width: 12rem;
-            height: 12rem;
-            border-radius: 100%;    
-        }
         .product__promotion--borderline{
             border-bottom: 2px solid #0A846E;
             width: 60%;
             margin-left: 20%;
             margin-top: 2rem;
         }
+    }
+    .product__promotion--icon{
+        background-color:#0A846E;
+        margin-top: 2rem;
+        padding:3rem;
+        width: 12rem;
+        height: 12rem;
+        border-radius: 100%;    
     }
 
   
@@ -216,7 +216,7 @@ in the center */
     }
 
     .warehouse__description{
-        .warehous--tittle{
+        .warehouse--tittle{
         font-size: 18px;
         font-weight: 600;
         margin-top: 2rem; 
@@ -397,8 +397,7 @@ in the center */
                 align-self: flex-start;
                 margin-right: 4rem;
             }
-        }
-      
+        }     
         .product__promotion--icon{
             grid-column: 1/span 1;
             grid-row: 2/span 1;
@@ -410,7 +409,6 @@ in the center */
             width: 70%;
             height: 80%;
             border-radius: 100%;
-        
         }
         .product__promotion--borderline{
             border-bottom: 4px solid #0A846E;
